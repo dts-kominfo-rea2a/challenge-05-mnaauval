@@ -10,10 +10,10 @@ const sorter = (arrName, cbSort) => {
   let result = [];
 
   for (let index = 0; index < arrName.length; index++) {
-    result.push(`${index + 1}. ${arrName[index]}`);
+    result.push(`${index + 1}. ${cbSort(arrName)[index]}`);
   }
 
-  return cbSort(result);
+  return result;
 };
 
 // TODO: Fungsi untuk mengurutkan array of string secara ascending
